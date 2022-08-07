@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int accountNum,montgageAmount,montgageTerm;
+	float interestRate;
+	printf("enter your account number \n");
+	scanf("%d",&accountNum);
+		printf("enter your montgage amount \n");
+	scanf("%d",&montgageAmount);
+		printf("enter your montgage years \n");
+	scanf("%d",&montgageTerm);
+		printf("enter your interest rate \n");
+	scanf("%f",&interestRate);
+	float interestPayable=montgageAmount*montgageTerm*interestRate;
+		printf(" the interest Payable are %f\n",interestPayable);
+	float totalAmountPayable=interestPayable+montgageAmount;
+		printf(" the total amount payable are %f\n",totalAmountPayable);
+	int monthlyPayment=totalAmountPayable/(montgageTerm*12);
+	printf("the monthly payable interest %d",monthlyPayment,round(monthlyPayment));
+	return 0;
+}
